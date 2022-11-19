@@ -10,6 +10,9 @@ const garageSeed = require('./models/garageCollection.js');
 // model file
 const Garage = require('./models/garageSchema.js');
 
+
+// GET/RENDER ROUTES
+// list of collection of cars
 app.get('/garage', (req, res) => {
     Garage.find({}, (err, allCars) => {
         console.log(allCars)
@@ -17,6 +20,42 @@ app.get('/garage', (req, res) => {
             cars: allCars
         })
     })
+})
+
+// showing form for new car
+app.get('/garage/new', (req, res) => {
+    res.send('will be form to add new car');
+})
+
+// showing one car
+app.get('/garage/:id', (req, res) => {
+    Garage.findById(req.params.id, (err, foundCar) => {
+        console.log(foundCar)
+        res.render('show.ejs', {
+            car: foundCar
+        })
+    })
+})
+
+// showing form to edit/update one car
+app.get('/garage/:id/edit', (req, res) => {
+    res.send('will be form to update/edit car info');
+})
+
+// ACTION/RENDER ROUTES
+// new car form will hit this post req route when form submit clicked
+app.post('/garage', (req, res) => {
+    res.send('new car added');
+})
+
+// delete request given car id parameter
+app.delete('/garage/:id', (req, res) => {
+    res.send('car removed from db');
+})
+
+// put request will submit send updated car info to db
+app.put('/garage/:id', (req, res) => {
+    res.send('car updated in db');
 })
 
 
