@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>Car Collection</h1>
+        <div id="cars-container">
+            <% for (let i = 0; i < cars.length; i++) {%>
+                <div class="car-item">
+                    <div>
+                        <img src="<%=cars[i].img%>" alt="">
+                        <ul class="car-info">
+                            <li>Year: <%=cars[i].year%></li>
+                            <li>Make: <%=cars[i].make%></li>
+                            <li>Model: <%=cars[i].model%></li>
+                            <li>Color: <%=cars[i].color%></li>
+                        </ul>
+                        <a href="/garage/<%=cars[i].id%>">View Car</a>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    </div>
+</body>
+</html>

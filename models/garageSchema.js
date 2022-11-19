@@ -17,6 +17,7 @@ const garageSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    color: String,
     mileage: Number,
     value: Number,
     specs: [String]
