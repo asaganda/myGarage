@@ -21,7 +21,9 @@
                         <li>Color: <%=car.color%></li>
                     </ul>
                     <a href="/garage/<%=car.id%>/edit">Update Car</a>
-                    <!-- <a href="/garage/id/edit">Delete Car</a>  -->
+                    <form action="/garage/<%=car.id%>?_method=DELETE" method="POST">
+                        <input type="submit" value="Delete">
+                    </form>
                     <!-- figure out how to delete car without using form tag -->
                 </div>
             </div>
