@@ -5,24 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Collection</title>
+    <link rel="stylesheet" href="/app.css">
 </head>
 <body>
-    <div>
+    <div id="collection-index">
         <h1>Car Collection</h1>
+        <a href="/garage/new">Add car to collection</a>
         <div id="cars-container">
             <% for (let i = 0; i < cars.length; i++) {%>
                 <div class="car-item">
-                    <div>
-                        <img src="<%=cars[i].img%>" alt="">
-                        <ul class="car-info">
-                            <li>Year: <%=cars[i].year%></li>
-                            <li>Make: <%=cars[i].make%></li>
-                            <li>Model: <%=cars[i].model%></li>
-                            <li>Color: <%=cars[i].color%></li>
-                        </ul>
-                        <a href="/garage/<%=cars[i].id%>">View Car</a>
-                        <a href="/garage/<%=cars[i].id%>/edit">Update Car</a>
-                    </div>
+                    <img src="<%=cars[i].img%>" alt="">
+                    <ul class="car-info">
+                        <li>Year: <%=cars[i].year%></li>
+                        <li>Make: <%=cars[i].make%></li>
+                        <li>Model: <%=cars[i].model%></li>
+                        <li>Color: <%=cars[i].color%></li>
+                    </ul>
+                    <a href="/garage/<%=cars[i].id%>">View Car</a>
+                    <a href="/garage/<%=cars[i].id%>/edit">Update Car</a>
+                    <a href="/garage/<%=cars[i].id%>">Delete Car</a>
+                    <form action="/garage/<%=cars[i].id%>?_method=DELETE" method="POST">
+                        <input type="submit" value="Delete">
+                    </form>
                 </div>
             <% } %>
         </div>

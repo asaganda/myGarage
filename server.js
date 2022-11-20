@@ -4,6 +4,7 @@ const mongoose = require('mongoose')
 const methodOverride = require('method-override');
 app.use(express.urlencoded({extended: true}))
 app.use(methodOverride('_method'))
+app.use(express.static('public'))
 
 // seed data
 const garageSeed = require('./models/garageCollection.js');
@@ -15,7 +16,11 @@ const Garage = require('./models/garageSchema.js');
 // list of collection of cars
 app.get('/garage', (req, res) => {
     Garage.find({}, (err, allCars) => {
-        console.log(allCars)
+        if (err) {
+            console.log(err.message)
+        } else {
+            console.log('showing all cars - all good')
+        }
         res.render('index.ejs', {
             cars: allCars
         })
@@ -24,16 +29,21 @@ app.get('/garage', (req, res) => {
 
 // showing form for new car
 app.get('/garage/new', (req, res) => {
-    res.send('will be form to add new car');
+    res.render('new.ejs');
 })
 
 // showing one car
 app.get('/garage/:id', (req, res) => {
     Garage.findById(req.params.id, (err, foundCar) => {
-        console.log(foundCar)
+        if (err) {
+            console.log(err.message)
+        } else {
+            console.log('showing one car - all good')
+        }
         res.render('show.ejs', {
             car: foundCar
         })
+        
     })
 })
 
@@ -45,12 +55,26 @@ app.get('/garage/:id/edit', (req, res) => {
 // ACTION/RENDER ROUTES
 // new car form will hit this post req route when form submit clicked
 app.post('/garage', (req, res) => {
-    res.send('new car added');
+    Garage.create(req.body, (err, createdCar) => {
+        if (err) {
+            console.log(err.message)
+        } else {
+            console.log('car created - all good')
+        }
+        res.redirect('/garage'); // will show car that got added
+    })
 })
 
 // delete request given car id parameter
 app.delete('/garage/:id', (req, res) => {
-    res.send('car removed from db');
+    Garage.findByIdAndDelete(req.params.id, (err, deletedCar) => {
+        if (err) {
+            console.log(err.message)
+        } else {
+            console.log('deleted car - all good')
+        }
+        res.redirect('/garage')
+    })
 })
 
 // put request will submit send updated car info to db

@@ -12,6 +12,7 @@
         <div id="car-container">
             <div class="car-item">
                 <div>
+                    <a href="/garage">Back to collection</a>
                     <img src="<%=car.img%>" alt="">
                     <ul class="car-info">
                         <li>Year: <%=car.year%></li>
@@ -20,7 +21,7 @@
                         <li>Color: <%=car.color%></li>
                     </ul>
                     <a href="/garage/<%=car.id%>/edit">Update Car</a>
-                    <a href="/garage/<%=car.id%>/edit">Delete Car</a> 
+                    <!-- <a href="/garage/id/edit">Delete Car</a>  -->
                     <!-- figure out how to delete car without using form tag -->
                 </div>
             </div>
