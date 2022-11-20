@@ -96,7 +96,7 @@ app.put('/garage/:id', (req, res) => {
         } else {
             console.log('updated the car - all good')
         }
-        res.redirect('/garage');
+        res.redirect(`/garage/${req.params.id}`);
     })
     
 })
