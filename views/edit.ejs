@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Collection</title>
+    <link rel="stylesheet" href="/app.css">
+</head>
+<body>
+    <div id="update-car">
+        <h1>Update car in collection</h1>
+        <a href="/garage">Back to collection</a>
+        <form action="/garage/<%=car.id%>?_method=PUT" method="POST">
+            <label for="img">Paste Image Link:</label>
+            <input type="text" name="img" value="<%=car.img%>">
+            <label for="year">Year:</label>
+            <input type="number" name="year" min="1" value="<%=car.year%>">
+            <label for="make">Make:</label>
+            <input type="text" name="make" value="<%=car.make%>">
+            <label for="model">Model:</label>
+            <input type="text" name="model" value="<%=car.model%>">
+            <label for="color">Color:</label>
+            <input type="text" name="color" value="<%=car.color%>">
+            <label for="mileage">Mileage:</label>
+            <input type="number" name="mileage" min="1" value="<%=car.mileage%>">
+            <label for="value">Value:</label>
+            <input type="number" name="value" min="1" value="<%=car.value%>">
+            <label for="specs">Specs</label>
+            <input type="text" name="specs" value="<%=car.specs%>">
+            <input type="submit" value="Update car">
+        </form>
+    </div>
+</body>
+</html>

@@ -19,6 +19,9 @@
                         <li>Make: <%=car.make%></li>
                         <li>Model: <%=car.model%></li>
                         <li>Color: <%=car.color%></li>
+                        <li>Mileage: <%=car.mileage%></li>
+                        <li>Value: <%=car.value%></li>
+                        <li>Specifications: <%=car.specs%></li>
                     </ul>
                     <a href="/garage/<%=car.id%>/edit">Update Car</a>
                     <form action="/garage/<%=car.id%>?_method=DELETE" method="POST">

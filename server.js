@@ -32,7 +32,7 @@ app.get('/garage/new', (req, res) => {
     res.render('new.ejs');
 })
 
-// showing one car
+// showing one car when selected
 app.get('/garage/:id', (req, res) => {
     Garage.findById(req.params.id, (err, foundCar) => {
         if (err) {
@@ -49,8 +49,19 @@ app.get('/garage/:id', (req, res) => {
 
 // showing form to edit/update one car
 app.get('/garage/:id/edit', (req, res) => {
-    res.send('will be form to update/edit car info');
+    Garage.findById(req.params.id, (err, foundCar) => {
+        if (err) {
+            console.log(err.message)
+        } else {
+            console.log('found car to edit - all good')
+        }
+        res.render('edit.ejs', {
+            car: foundCar
+        })
+    })
+    
 })
+
 
 // ACTION/RENDER ROUTES
 // new car form will hit this post req route when form submit clicked
@@ -79,7 +90,15 @@ app.delete('/garage/:id', (req, res) => {
 
 // put request will submit send updated car info to db
 app.put('/garage/:id', (req, res) => {
-    res.send('car updated in db');
+    Garage.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedCar) => {
+        if (err) {
+            console.log(err.message)
+        } else {
+            console.log('updated the car - all good')
+        }
+        res.redirect('/garage');
+    })
+    
 })
 
 
