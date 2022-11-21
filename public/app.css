@@ -1,16 +1,51 @@
 /* css color vars */
 :root {
-    --main-red-color: #BA3636;
+    --main-red-color: #ed1919;
 }
 
 * {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    position: sticky;
+    top: 0;
+}
+.navbar {
+    background: black;
+    display: flex;
+    flex-direction: column;
+    padding: 0.9em 1em;
+    justify-content: space-between;
+}
+#navbar-main {
+    display: flex;
+    justify-content: space-between;
 }
 .navbar #nav-title {
     color: var(--main-red-color);
 }
+.hamburger-menu {
+    color: red;
+    align-self: center;
+}
+#nav-links-container {
+    display: none;
+}
+ul.nav {
+    list-style: none;
+    text-align: right;
+}
+.nav-link {
+    color: var(--main-red-color);
+    text-decoration: none;
+}
 #cars-container .car-item {
     border: 2px solid black;
+}
+.car-item img {
+    width: 100%;
 }
 
 #new-car form {
