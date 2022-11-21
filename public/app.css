@@ -1,7 +1,15 @@
+/* css color vars */
+:root {
+    --main-red-color: #BA3636;
+}
+
 * {
     margin: 0;
 }
-#collection-index  .car-item {
+.navbar #nav-title {
+    color: var(--main-red-color);
+}
+#cars-container .car-item {
     border: 2px solid black;
 }
 
