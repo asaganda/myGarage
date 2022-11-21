@@ -26,8 +26,10 @@
             </nav>    
         </header>
     <main>
-        <h1>Car Collection</h1>
-        <a href="/garage/new">Add car to collection</a>
+        <section id="collection-header">
+            <h1>Welcome to My Garage</h1>
+            <a href="/garage/new"><i class="fa-sharp fa-solid fa-plus fa-lg"></i>Add car</a>
+        </section>
         <div id="cars-container">
             <% for (let i = 0; i < cars.length; i++) {%>
                 <div class="car-item">

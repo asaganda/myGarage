@@ -45,6 +45,24 @@ ul.nav {
     color: var(--main-red-color);
     text-decoration: none;
 }
+#collection-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: lightgray;
+    justify-content: space-between;
+    padding: 1em;
+}
+#collection-header h1 {
+    color: black;
+}
+#collection-header a {
+    color: var(--main-red-color);
+    text-decoration: none;
+    text-transform: capitalize;
+    border: 2px solid var(--main-red-color);
+    padding: 0.3em 0.4em;
+}
 #cars-container .car-item {
     border: 2px solid black;
 }
