@@ -37,6 +37,10 @@ ul.nav {
     list-style: none;
     text-align: right;
 }
+.nav-item {
+    padding: 0.5em 0em;
+    font-size: 1.2em;
+}
 .nav-link {
     color: var(--main-red-color);
     text-decoration: none;
@@ -52,4 +56,25 @@ ul.nav {
     display: flex;
     flex-direction: column;
     width: 200px;
+}
+
+@media (min-width: 768px) {
+    .navbar {
+        flex-direction: row;
+    }
+    i.hamburger-menu {
+        display: none;
+    }
+    #nav-links-container {
+        display: flex;
+        width: 13em;
+    }
+    ul.nav {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+    #navbar-main {
+        align-items: center;
+    }
 }
