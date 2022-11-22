@@ -4,30 +4,34 @@
     <%-include('./partials/head.ejs')%>
 </head>
 <body>
-    <div>
-        <h1>Each Car</h1>
-        <div id="car-container">
-            <div class="car-item">
-                <div>
-                    <a href="/garage">Back to collection</a>
-                    <img src="<%=car.img%>" alt="">
-                    <ul class="car-info">
-                        <li>Year: <%=car.year%></li>
-                        <li>Make: <%=car.make%></li>
-                        <li>Model: <%=car.model%></li>
-                        <li>Color: <%=car.color%></li>
-                        <li>Mileage: <%=car.mileage%></li>
-                        <li>Value: <%=car.value%></li>
-                        <li>Specifications: <%=car.specs%></li>
-                    </ul>
-                    <a href="/garage/<%=car.id%>/edit">Update Car</a>
-                    <form action="/garage/<%=car.id%>?_method=DELETE" method="POST">
-                        <input type="submit" value="Delete">
-                    </form>
-                    <!-- figure out how to delete car without using form tag -->
+    <%-include('./partials/header.ejs')%>
+    <main>
+        <div>
+            <h1>Each Car</h1>
+            <div id="car-container">
+                <div class="car-item">
+                    <div>
+                        <a href="/garage">Back to collection</a>
+                        <img src="<%=car.img%>" alt="">
+                        <ul class="car-info">
+                            <li>Year: <%=car.year%></li>
+                            <li>Make: <%=car.make%></li>
+                            <li>Model: <%=car.model%></li>
+                            <li>Color: <%=car.color%></li>
+                            <li>Mileage: <%=car.mileage%></li>
+                            <li>Value: <%=car.value%></li>
+                            <li>Specifications: <%=car.specs%></li>
+                        </ul>
+                        <a href="/garage/<%=car.id%>/edit">Update Car</a>
+                        <form action="/garage/<%=car.id%>?_method=DELETE" method="POST">
+                            <input type="submit" value="Delete">
+                        </form>
+                        <!-- figure out how to delete car without using form tag -->
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </main>
+    <%-include('./partials/bootstrap-js.ejs')%>
 </body>
 </html>

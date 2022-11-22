@@ -80,6 +80,7 @@ ul.nav {
 }
 #collection-header h1 {
     color: black;
+    font-size: 1.5em;
 }
 #collection-header a {
     color: var(--main-red-color);
@@ -88,12 +89,28 @@ ul.nav {
     border: 2px solid var(--main-red-color);
     padding: 0.3em 0.4em;
 }
-#cars-container .car-item {
+.card-body {
+    padding: 1em 1em;
+}
+.car-info {
+    list-style: none;
+}
+.car-info .info-item {
+    margin-right: 0.5em;
+}
+.garage-btn {
+    color: var(--main-red-color);
+    border: 2px solid var(--main-red-color);
+    padding: 0.5em 1.2em;
+    min-width: 100px;
+    background-color: white;
+}
+/* #cars-container .car-item {
     border: 2px solid black;
 }
 .car-item img {
     width: 100%;
-}
+} */
 
 #new-car form {
     display: flex;
