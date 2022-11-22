@@ -1,0 +1,16 @@
+#each-car p {
+    font-size: 1.3em;
+}
+#each-car h1 {
+    color: black;
+    font-size: 1.5em;
+}
+#each-car .garage-btn a {
+    color: var(--main-red-color);
+}
+@media (min-width: 992px) {
+    img.card-img-top {
+        width: 50%;
+        object-fit: contain;
+    }
+}
