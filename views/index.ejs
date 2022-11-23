@@ -20,7 +20,7 @@
                 <% for (let i = 0; i < cars.length; i++) {%>
                     <div class="col-12 col-md-6 mb-4">
                         <div class="card m-3 border border-danger rounded-0">
-                            <img src="<%=cars[i].img%>" class="card-img-top" alt="">
+                            <a href="/garage/<%=cars[i].id%>"><img src="<%=cars[i].img%>" class="card-img-top" alt=""></a>
                             <div class="card-body d-xl-flex justify-content-xl-between">
                             <!-- <h5 class="card-title">Card title</h5>
                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> -->

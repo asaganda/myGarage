@@ -15,6 +15,10 @@
 }
 #update-car .form-control {
     border: 1px solid var(--main-red-color);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
 }
 @media (min-width: 992px) {
     #update-car img.card-img-top {
