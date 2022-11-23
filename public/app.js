@@ -1,4 +1,5 @@
 $(()=> {
+    console.log('js connected properly')
 //    $('.hamburger-menu').on('click', () => {
 //         $('#nav-links-container').toggle('fast');
 //    })
@@ -23,4 +24,30 @@ $(()=> {
     //     }
     // }
     // makeDivs()
+
+    // active class related
+    const $navItems = $('.nav-item');
+    const navActiveClass = 'active-item';
+    // individual nav items
+    const $navItemCollection = $('#nav-collection');
+    const $navItemAddCar = $('#nav-add');
+
+    const navItemActive = (navItem, activeClass) => {
+        console.log($navItems)
+        for (let i = 0; i < $navItems.length; i++) {
+            const objectClassCollection = $navItems[i].classList;
+            objectClassCollection.remove(activeClass);
+        }
+        $(navItem).addClass(activeClass);
+    }
+
+    $('#nav-collection').on('click', () => {
+        console.log('clicked - nav item should have red color')
+        // navItemActive($navItemCollection, navActiveClass);
+    })
+    
+    $('#nav-add').on('click', () => {
+        console.log('clicked - nav item should have red color')
+        // navItemActive($navItemAddCar, navActiveClass);
+    })
 })

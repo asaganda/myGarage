@@ -92,11 +92,11 @@ ul.nav {
 .navbar-dark .navbar-brand {
     color: var(--main-red-color);
 }
-.navbar-dark .navbar-nav .active>.nav-link,
+.navbar-dark .navbar-nav .active-item>.nav-link,
 .navbar-dark .navbar-nav .nav-link {
     color: var(--main-red-color);
 }
-.navbar-dark .navbar-nav .active>.nav-link {
+.navbar-dark .navbar-nav .active-item>.nav-link {
     border-right: 2px solid var(--main-red-color);
     padding-right: 0.5em;
 }
@@ -177,7 +177,7 @@ ul.nav {
     #navbar-main {
         align-items: center;
     } */
-    .navbar-dark .navbar-nav .active>.nav-link {
+    .navbar-dark .navbar-nav .active-item>.nav-link {
         border-bottom: 2px solid var(--main-red-color);
         border-right: none;
     }
