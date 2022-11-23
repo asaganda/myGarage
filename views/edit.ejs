@@ -19,33 +19,34 @@
                   <!-- <h5 class="card-title">Card title</h5> -->
                   <p class="card-text font-weight-bold">Update car information below:</p>
                   <form action="/garage/<%=car.id%>?_method=PUT" method="POST" class="d-flex flex-column">
-                    <div class="form-group">
-                        <label for="year">Year</label>
-                        <input type="text" class="form-control" id="year" aria-describedby="year" name="year" value="<%=car.year%>">
+                    <div class="form-group row">
+                        <label for="year" class="col-3 col-lg-4 col-form-label">Year</label>
+                        <input type="text" class="form-control col-8 col-lg-7" id="year" aria-describedby="year" name="year" value="<%=car.year%>">
                     </div>
-                    <div class="form-group">
-                        <label for="make">Make</label>
-                        <input type="text" class="form-control" id="make" aria-describedby="make" name="make" value="<%=car.make%>">
+                    <div class="form-group row">
+                        <label for="make" class="col-3 col-lg-4 col-form-label">Make</label>
+                        <input type="text" class="form-control col-8 col-lg-7" id="make" aria-describedby="make" name="make" value="<%=car.make%>">
                     </div>
-                    <div class="form-group">
-                        <label for="model">Model</label>
-                        <input type="text" class="form-control" id="model" aria-describedby="model" name="model" value="<%=car.model%>">
+                    <div class="form-group row">
+                        <label for="model" class="col-3 col-lg-4 col-form-label">Model</label>
+                        <input type="text" class="form-control col-8 col-lg-7" id="model" aria-describedby="model" name="model" value="<%=car.model%>">
                     </div>
-                    <div class="form-group">
-                        <label for="color">Color</label>
-                        <input type="text" class="form-control" id="color" aria-describedby="color" name="color" value="<%=car.color%>">
+                    <div class="form-group row">
+                        <label for="color" class="col-3 col-lg-4 col-form-label">Color</label>
+                        <input type="text" class="form-control col-8 col-lg-7" id="color" aria-describedby="color" name="color" value="<%=car.color%>">
                     </div>
-                    <div class="form-group">
-                        <label for="mileage">Mileage</label>
-                        <input type="text" class="form-control" id="mileage" aria-describedby="mileage" name="mileage" value="<%=car.mileage%>">
+                    <div class="form-group row">
+                        <label for="mileage" class="col-3 col-lg-4 col-form-label">Mileage</label>
+                        <input type="text" class="form-control col-8 col-lg-7" id="mileage" aria-describedby="mileage" name="mileage" value="<%=car.mileage%>">
                     </div>
-                    <div class="form-group">
-                        <label for="value">Value</label>
-                        <input type="text" class="form-control" id="value" aria-describedby="value" name="value" value="$<%=car.value%>">
+                    <div class="form-group row">
+                        <label for="value" class="col-3 col-lg-4 col-form-label">Value</label>
+                        <input type="text" class="form-control col-8 col-lg-7" id="value" aria-describedby="value" name="value" value="$<%=car.value%>">
                     </div>
-                    <div class="form-group">
-                        <label for="specs">Specifications</label>
-                        <input type="text" class="form-control" id="specs" aria-describedby="specs" name="specs" value="<%=car.specs%>">
+                    <div class="form-group row">
+                        <label for="specs" class="col-3 col-form-label d-sm-none">Specs</label>
+                        <label for="specs" class="col-3 col-lg-4 col-form-label d-none d-sm-block">Specifications</label>
+                        <input type="text" class="form-control col-8 col-lg-7" id="specs" aria-describedby="specs" name="specs" value="<%=car.specs%>">
                     </div>
                     <button type="submit" class="garage-btn align-self-end">Update</button>
                   </form>
