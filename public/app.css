@@ -1,5 +1,6 @@
 @import "show.css";
 @import "edit.css";
+@import "new.css";
 
 /* css color vars */
 :root {
@@ -120,11 +121,11 @@ ul.nav {
     width: 100%;
 } */
 
-#new-car form {
+/* #new-car form {
     display: flex;
     flex-direction: column;
     width: 200px;
-}
+} */
 
 /* tablet portrait */
 @media (min-width: 768px) {

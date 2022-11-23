@@ -1,0 +1,15 @@
+#new-car #new-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: lightgray;
+    justify-content: space-between;
+    padding: 1em;
+}
+#new-car #new-header h1 {
+    color: black;
+    font-size: 1.5em;
+}
+#new-car .garage-btn a {
+    color: var(--main-red-color);
+}
