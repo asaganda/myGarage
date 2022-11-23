@@ -6,9 +6,16 @@
     justify-content: space-between;
     padding: 1em;
 }
-#new-car #new-header h1 {
+#new-car h1 {
     color: black;
     font-size: 1.5em;
+}
+#new-car .form-control {
+    border: 1px solid var(--main-red-color);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
 }
 #new-car .garage-btn a {
     color: var(--main-red-color);
