@@ -13,3 +13,12 @@
 #update-car .garage-btn a {
     color: var(--main-red-color);
 }
+#update-car .form-control {
+    border: 1px solid var(--main-red-color);
+}
+@media (min-width: 992px) {
+    #update-car img.card-img-top {
+        width: 50%;
+        object-fit: contain;
+    }
+}

@@ -6,19 +6,19 @@
 <body>
     <%-include('./partials/header.ejs')%>
     <main>
-        <div id="update-car">
+        <div id="update-car" class="pt-3">
             <!-- <section id="update-header">
                 <h1>Update car</h1>
             </section> -->
-            <button class="garage-btn ml-4">
+            <button class="garage-btn ml-3">
                 <a href="/garage">Back to Garage</a>
             </button>
-            <div class="card m-3 border border-danger rounded-0">
+            <div class="card m-3 flex-lg-row border border-danger rounded-0">
                 <img src="<%=car.img%>" class="card-img-top" alt="">
                 <div class="card-body">
                   <!-- <h5 class="card-title">Card title</h5> -->
                   <p class="card-text font-weight-bold">Update car information below:</p>
-                  <form action="/garage/<%=car.id%>?_method=PUT" method="POST">
+                  <form action="/garage/<%=car.id%>?_method=PUT" method="POST" class="d-flex flex-column">
                     <div class="form-group">
                         <label for="year">Year</label>
                         <input type="text" class="form-control" id="year" aria-describedby="year" name="year" value="<%=car.year%>">
@@ -47,7 +47,7 @@
                         <label for="specs">Specifications</label>
                         <input type="text" class="form-control" id="specs" aria-describedby="specs" name="specs" value="<%=car.specs%>">
                     </div>
-                    <button type="submit" class="btn">Update</button>
+                    <button type="submit" class="garage-btn align-self-end">Update</button>
                   </form>
                 </div>
               </div>
