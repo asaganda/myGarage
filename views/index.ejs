@@ -17,24 +17,8 @@
                 <a href="/garage/new"><i class="fa-sharp fa-solid fa-plus fa-lg"></i>Add car</a>
             </section>
             <div id="cars-container" class="row">
-                <!-- <% for (let i = 0; i < cars.length; i++) {%>
-                    <div class="car-item">
-                        <img src="<%=cars[i].img%>" alt="">
-                        <ul class="car-info">
-                            <li>Year: <%=cars[i].year%></li>
-                            <li>Make: <%=cars[i].make%></li>
-                            <li>Model: <%=cars[i].model%></li>
-                            <li>Color: <%=cars[i].color%></li>
-                        </ul>
-                        <a href="/garage/<%=cars[i].id%>">View Car</a>
-                        <a href="/garage/<%=cars[i].id%>/edit">Update Car</a>
-                        <form action="/garage/<%=cars[i].id%>?_method=DELETE" method="POST">
-                            <input type="submit" value="Delete">
-                        </form>
-                    </div>
-                <% } %> -->
                 <% for (let i = 0; i < cars.length; i++) {%>
-                    <div class="col-12 col-md-6">
+                    <div class="col-12 col-md-6 mb-4">
                         <div class="card m-3 border border-danger rounded-0">
                             <img src="<%=cars[i].img%>" class="card-img-top" alt="">
                             <div class="card-body d-xl-flex justify-content-xl-between">
