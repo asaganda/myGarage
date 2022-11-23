@@ -8,58 +8,57 @@
     <main>
         <div id="each-car">
             <div id="car-container" class="pt-3">
-                <button class="garage-btn ml-4">
+                <button class="garage-btn ml-3">
                     <a href="/garage">Back to Garage</a>
                 </button>
-                <div class="col-12">
-                    <div class="card flex-lg-row m-3 border border-danger rounded-0">
-                        <img src="<%=car.img%>" class="card-img-top" alt="">
-                        <div class="card-body">
-                            <!-- <h5 class="card-title">Card title</h5> -->
-                            <p class="card-text font-weight-bold">Information</p>
-                            <table class="table">
-                                <tbody>
-                                    <tr>
-                                        <th scope="row">Year</th>
-                                        <td><%=car.year%></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Make</th>
-                                        <td><%=car.make%></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Model</th>
-                                        <td><%=car.model%></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Color</th>
-                                        <td><%=car.color%></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Mileage</th>
-                                        <td><%=car.mileage%></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Value</th>
-                                        <td>$<%=car.value%></td>
-                                    </tr>
-                                    <tr>
-                                        <th scope="row">Specifications</th>
-                                        <td><%=car.specs%></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <div class="d-flex justify-content-around justify-content-md-end align-items-xl-baseline">
-                                <button class="garage-btn mr-md-4">
-                                    <a href="/garage/<%=car.id%>/edit">Edit</a>
-                                </button>
-                                <form action="/garage/<%=car.id%>?_method=DELETE" method="POST">
-                                    <input class="garage-btn" type="submit" value="Delete">
-                                </form>
-                            </div>
+                <div class="card flex-lg-row m-3 border border-danger rounded-0">
+                    <img src="<%=car.img%>" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <!-- <h5 class="card-title">Card title</h5> -->
+                        <p class="card-text font-weight-bold">Car Information</p>
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">Year</th>
+                                    <td><%=car.year%></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Make</th>
+                                    <td><%=car.make%></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Model</th>
+                                    <td><%=car.model%></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Color</th>
+                                    <td><%=car.color%></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Mileage</th>
+                                    <td><%=car.mileage%></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Value</th>
+                                    <td>$<%=car.value%></td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">Specifications</th>
+                                    <td><%=car.specs%></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="d-flex justify-content-around justify-content-md-end align-items-xl-baseline">
+                            <button class="garage-btn mr-md-4">
+                                <a href="/garage/<%=car.id%>/edit">Edit</a>
+                            </button>
+                            <form action="/garage/<%=car.id%>?_method=DELETE" method="POST">
+                                <input class="garage-btn" type="submit" value="Delete">
+                            </form>
                         </div>
                     </div>
                 </div>
+                
                 <!-- <div class="car-item">
                     <div>
                         <a href="/garage">Back to collection</a>
