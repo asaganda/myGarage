@@ -1,0 +1,12 @@
+#update-car #update-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: lightgray;
+    justify-content: space-between;
+    padding: 1em;
+}
+#update-car #update-header h1 {
+    color: black;
+    font-size: 1.5em;
+}
