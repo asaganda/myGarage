@@ -7,13 +7,54 @@
     <%-include('./partials/header.ejs')%>
     <main>
         <div id="update-car">
-            <section id="update-header">
+            <!-- <section id="update-header">
                 <h1>Update car</h1>
-            </section>
-            <a href="/garage">Back to collection</a>
-            <form action="/garage/<%=car.id%>?_method=PUT" method="POST">
+            </section> -->
+            <button class="garage-btn ml-4">
+                <a href="/garage">Back to Garage</a>
+            </button>
+            <div class="card m-3 border border-danger rounded-0">
+                <img src="<%=car.img%>" class="card-img-top" alt="">
+                <div class="card-body">
+                  <!-- <h5 class="card-title">Card title</h5> -->
+                  <p class="card-text font-weight-bold">Update car information below:</p>
+                  <form action="/garage/<%=car.id%>?_method=PUT" method="POST">
+                    <div class="form-group">
+                        <label for="year">Year</label>
+                        <input type="text" class="form-control" id="year" aria-describedby="year" name="year" value="<%=car.year%>">
+                    </div>
+                    <div class="form-group">
+                        <label for="make">Make</label>
+                        <input type="text" class="form-control" id="make" aria-describedby="make" name="make" value="<%=car.make%>">
+                    </div>
+                    <div class="form-group">
+                        <label for="model">Model</label>
+                        <input type="text" class="form-control" id="model" aria-describedby="model" name="model" value="<%=car.model%>">
+                    </div>
+                    <div class="form-group">
+                        <label for="color">Color</label>
+                        <input type="text" class="form-control" id="color" aria-describedby="color" name="color" value="<%=car.color%>">
+                    </div>
+                    <div class="form-group">
+                        <label for="mileage">Mileage</label>
+                        <input type="text" class="form-control" id="mileage" aria-describedby="mileage" name="mileage" value="<%=car.mileage%>">
+                    </div>
+                    <div class="form-group">
+                        <label for="value">Value</label>
+                        <input type="text" class="form-control" id="value" aria-describedby="value" name="value" value="$<%=car.value%>">
+                    </div>
+                    <div class="form-group">
+                        <label for="specs">Specifications</label>
+                        <input type="text" class="form-control" id="specs" aria-describedby="specs" name="specs" value="<%=car.specs%>">
+                    </div>
+                    <button type="submit" class="btn">Update</button>
+                  </form>
+                </div>
+              </div>
+
+            <!-- <form action="/garage/<%=car.id%>?_method=PUT" method="POST">
                 <label for="img">Paste Image Link:</label>
-                <input type="text" name="img" value="<%=car.img%>">
+                <input type="text" name="img" value="<%=car.img%>"> 
                 <label for="year">Year:</label>
                 <input type="number" name="year" min="1" value="<%=car.year%>">
                 <label for="make">Make:</label>
@@ -29,7 +70,7 @@
                 <label for="specs">Specs</label>
                 <input type="text" name="specs" value="<%=car.specs%>">
                 <input type="submit" value="Update car">
-            </form>
+            </form> -->
         </div>
     </main>
     <%-include('./partials/bootstrap-js.ejs')%>
