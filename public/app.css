@@ -107,6 +107,9 @@ ul.nav {
     min-width: 100px;
     background-color: white;
 }
+#cars-collection .garage-btn a {
+    color: var(--main-red-color);
+}
 
 
 /* #cars-container .car-item {

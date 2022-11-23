@@ -9,7 +9,7 @@
     color: var(--main-red-color);
 }
 @media (min-width: 992px) {
-    img.card-img-top {
+    #each-car img.card-img-top {
         width: 50%;
         object-fit: contain;
     }
