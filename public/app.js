@@ -25,29 +25,17 @@ $(()=> {
     // }
     // makeDivs()
 
-    // active class related
-    const $navItems = $('.nav-item');
-    const navActiveClass = 'active-item';
-    // individual nav items
-    const $navItemCollection = $('#nav-collection');
-    const $navItemAddCar = $('#nav-add');
-
-    const navItemActive = (navItem, activeClass) => {
-        console.log($navItems)
-        for (let i = 0; i < $navItems.length; i++) {
-            const objectClassCollection = $navItems[i].classList;
-            objectClassCollection.remove(activeClass);
+    // testing active class with location pathname
+    // checking to see if location pathname is /garage/new
+    // else check location pathname is /garage
+    const activeNavTabCheck = () => {
+        if (document.location.pathname.split("/")[2] === 'new') {
+            document.querySelector('#nav-add').classList.add('active')
+        } else if (document.location.pathname.split("/")[1] === 'garage') {
+            document.querySelector('#nav-collection').classList.add('active')
+        } else {
+            console.log('i should never see this because collection or new should be active')
         }
-        $(navItem).addClass(activeClass);
     }
-
-    $('#nav-collection').on('click', () => {
-        console.log('clicked - nav item should have red color')
-        // navItemActive($navItemCollection, navActiveClass);
-    })
-    
-    $('#nav-add').on('click', () => {
-        console.log('clicked - nav item should have red color')
-        // navItemActive($navItemAddCar, navActiveClass);
-    })
+    activeNavTabCheck()
 })
