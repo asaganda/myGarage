@@ -18,7 +18,7 @@
     box-sizing: border-box;
 }
 body {
-    margin-top: 3.5em;
+    margin-top: 4.3em;
 }
 #garage-door {
     height: 100%;
@@ -99,6 +99,8 @@ ul.nav {
 }
 .navbar-dark .navbar-brand {
     color: var(--main-red-color);
+    font-family: 'garageFont';
+    font-size: 1.8em;
 }
 .navbar-dark .navbar-nav .active>.nav-link,
 .navbar-dark .navbar-nav .nav-link {
@@ -119,6 +121,8 @@ ul.nav {
 #collection-header h1 {
     color: black;
     font-size: 1.5em;
+    font-family: 'garageFont';
+    align-self: end;
 }
 #collection-header a {
     color: var(--main-red-color);
