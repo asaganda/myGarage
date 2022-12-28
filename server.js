@@ -118,10 +118,19 @@ mongoose.connect(MONGODB_URI, () => {
     console.log('The connection with mongo is established')
 })
 
-// Garage.create(garageSeed, (err, data) => {
-//     if (err) {
-//         console.log(err.message)
-//     } else {
-//         console.log('added garage data')
-//     }
-// })
+const seedCarData = () => {
+    Garage.create(garageSeed, (err, data) => {
+        if (err) {
+            console.log(err.message)
+        } else {
+            console.log('added garage data')
+        }
+    })
+}
+
+const checkDatabaseForCars = () => {
+    const carCount = Garage.countDocuments()
+    (carCount < 0) ? seedCarData() : null
+}
+
+checkDatabaseForCars()
