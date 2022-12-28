@@ -5,6 +5,15 @@ const methodOverride = require('method-override');
 app.use(express.urlencoded({extended: true}))
 app.use(methodOverride('_method'))
 app.use(express.static('public'))
+require('dotenv').config()
+
+// PORT
+// Allow use of Heroku's port or our own local port, depending on the environment
+const PORT = process.env.PORT || 3000;
+
+// Database
+// How to connect to the database either via heroku or locally
+const MONGODB_URI = process.env.MONGODB_URI;
 
 // seed data
 const garageSeed = require('./models/garageCollection.js');
@@ -102,12 +111,10 @@ app.put('/garage/:id', (req, res) => {
 })
 
 
-app.listen(3000, () => {
-    console.log('listening');
-})
+app.listen(PORT, () => console.log('listening on port:', PORT));
 
 // garage is sub db which will have a collection
-mongoose.connect('mongodb://localhost:27017/garage', () => {
+mongoose.connect(MONGODB_URI, () => {
     console.log('The connection with mongo is established')
 })
 
