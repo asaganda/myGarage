@@ -118,19 +118,31 @@ mongoose.connect(MONGODB_URI, () => {
     console.log('The connection with mongo is established')
 })
 
-const seedCarData = () => {
-    Garage.create(garageSeed, (err, data) => {
-        if (err) {
-            console.log(err.message)
-        } else {
-            console.log('added garage data')
-        }
-    })
-}
+// used this code below to seed data intially onto mongodb atlas
+// Garage.create(garageSeed, (err, data) => {
+//     if (err) {
+//         console.log(err.message)
+//     } else {
+//         console.log('added garage data')
+//     }
+// })
 
-const checkDatabaseForCars = () => {
-    const carCount = Garage.countDocuments()
-    (carCount < 0) ? seedCarData() : null
-}
+// const seedCarData = () => {
+// }
 
-checkDatabaseForCars()
+// const checkDatabaseForCars = () => {
+//     const carCount = Garage.countDocuments({}, (err, count) => {
+//         console.log(count)
+//         return count
+//     })
+//     console.log(carCount)
+//     if (carCount === 0) {
+//         seedCarData()
+//         console.log('data should be seeded now')
+//         carCount()
+//     } else {
+//         console.log('couldnt seed data')
+//     }
+// }
+
+// checkDatabaseForCars()
